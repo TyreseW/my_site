@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Validate Web Form w/ JavaScript</title>
+    <!--Author: Tyrese White-->
+    <meta charset="UTF-8">
+    <link href="includes/styles.css" rel="stylesheet"/>
+    <script src="includes/validate.js"></script>
+    <style>
+        /* form{
+            margin: 0 auto;
+            padding: 2% 0;
+            width: 40%;
+        }
+        input, label{
+            display: block;
+            float: left;
+            margin: 1px 2px;
+            text-align: left;
+        }
+        input[type=checkbox], input[type=radio]{
+            clear: right;
+            display: inline;
+            float: left;
+            margin: 2px 2px;
+            width: auto;
+        } */
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center; font-size: 35px;">My Form</h2>
+    <hr>
+    <form id="myForm" name="myForm" method="POST" action="mailto:whitetyy02@gmail.com"
+     novalidate onsubmit="return(validateForm());">
+        <fieldset id="demo">
+            <legend>Demographics</legend>
+            <label for="fName">First Name</label>
+            <input type="text" id="fName" name="fName" placeholder="Enter First Name">
+            <br class="clear">
+            <label for="lName">Last Name:</label>
+            <input type="text" id="lName" name="lName" placeholder="Enter Last Name">
+            <br class="clear">
+            <label for="myCity">City:</label>
+            <input type="text" id="myCity" name="myCity">
+            <br class="clear">
+            <label for="myState">State:</label>
+            <select id="myState" name="myState">
+                <!-- <div class=""></div> --> 
+                <!-- Add states  -->
+            </select>
+            <br class="clear">
+            <label for="zipCode">Zip Code:</label>
+            <input type="text" id="zipCode" name="zipCode">
+            <br class="clear">
+            </fieldset>
+            <!-- personal info -->
+            <fieldset id="myInfo">
+                <legend>Personal Information</legend>
+                <label for="userAddress">Address:</label>
+                <input type="text" id="userAddress" name="userAddress">
+                <br class="clear">
+                <label for="userEmail">Email Address:</label>
+                <input type="text" id="userEmail" name="userEmail">
+                <br class="clear">
+                <label for="userNumber">Phone Number:</label>
+                <input type="tel" id="userNumber" name="userNumber">
+                <br class="clear">
+                <br>
+                <pre>
+                    <small>Phone Number: xxx-xxx-xxxx or xxxxxxxxxx</small>
+                </pre>
+
+                </fieldset>
+                <input type="radio" id="colorOne" value="radio" onclick="changeColors('x')"> Color 1
+                <br>
+                <input type="radio" id="colorTwo" value="radio" onclick="changeColors('y')"> Color 2
+                <br>
+                <input type="radio" id="colorThree" value="radio" onclick="changeColors('z')"> Color 3
+                <br>
+                <label for="submit"></label>
+                <button type="submit" id="submit" name="submit">Submit</button>
+                <label for="reset"></label>
+                <button type="reset" id="reset" name="reset">Reset</button>
+    </form>
+    <br>
+    <br>
+    <button><a href="index.html">Return Home</a></button>
+
+    <script src="includes/validate.js"></script>
+</body>
+</html>

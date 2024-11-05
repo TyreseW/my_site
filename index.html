@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <!--Author: Tyrese 
+    Task: Homepage for all my website pages
+    Date: 5/23/20 -->
+    <title>My Portfolio</title>
+    <meta charset="UTF-8">
+    <link href="includes/styles.css" rel="stylesheet"/>
+</head>
+<body>
+    <header>
+        <h1>You've wasted your time. No refunds.</h1>
+    </header>
+        <br>
+        <br>
+    <div id="nav"></div>
+<footer>
+        <p id="currentDate" style="text-align: center;"></p>
+        <script>
+            //array of months to return the month as a name
+            var today = new Date();
+            //Current Date
+            var date = today.getFullYear() + "-" + today.getMonth() + "-" + today.getDate();
+            //Current Time
+            var time = today.getHours() + ":" + today.getMinutes();
+            var dateTime = date+' '+time;
+            document.getElementById("currentDate").innerText = "Current Date & Time: "  + dateTime;
+        </script>
+        <!-- load navbar content -->
+        <script>
+            fetch("navbar.html")
+                .then(response => response.text())
+            .then(data => {
+                document.getElementById("nav").innerHTML = data;
+            // Load the navbar JavaScript file after loading the HTML content
+                const script = document.createElement("script");
+                script.src = "includes/navbar.js"; // Path to your JavaScript file
+                document.body.appendChild(script);
+        })
+            .catch(error => console.error("Error loading navbar:", error));
+        </script>
+        <p style="text-align: center;">This page was last modified on:
+        <script>document.write(document.lastModified);</script></p>
+</footer>
+</body>
+</html>
