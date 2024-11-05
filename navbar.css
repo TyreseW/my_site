@@ -1,0 +1,39 @@
+.sideNav{
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #292626;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sideNav a, .dropdownBtn{
+  padding: 4px 6px 4px 8px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #a39d9d;
+  display: block;
+  border: none;
+  background: none;
+  width: 100;
+  cursor: pointer;
+  outline: none;
+}
+
+.sideNav a:hover, .dropdownBtn:hover{
+  color: #f1f1f1;
+}
+
+.dropdownBtn:active{
+  background-color: green;
+  color: white;
+}
+
+.dropdown-container{
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
